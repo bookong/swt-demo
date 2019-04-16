@@ -1,0 +1,1 @@
+start "Demo" "javaw" -Xmx128M -cp %cd% -Djava.ext.dirs="%cd%\target;%cd%\target\lib" -Djava.library.path="%cd%\target\lib" net.bookong.demo.swt.JFaceApplicationWindow
