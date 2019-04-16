@@ -62,6 +62,13 @@
 			<version>3.2.1-M20060908-1000</version>
 		</dependency>
 
+		<!-- GEF -->
+		<dependency>
+			<groupId>org.eclipse</groupId>
+			<artifactId>gef</artifactId>
+			<version>3.2.100-v20070620</version>
+		</dependency>
+
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
