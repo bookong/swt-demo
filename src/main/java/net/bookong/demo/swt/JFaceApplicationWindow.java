@@ -11,9 +11,16 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.events.MouseAdapter;
+import org.eclipse.swt.events.MouseEvent;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Label;
 
 
 public class JFaceApplicationWindow extends ApplicationWindow {
+    private Text text;
 
     /**
      * Create the application window.
@@ -34,9 +41,16 @@ public class JFaceApplicationWindow extends ApplicationWindow {
     protected Control createContents(Composite parent) {
         Composite container = new Composite(parent, SWT.NONE);
         
-        Button btnNewButton = new Button(container, SWT.NONE);
-        btnNewButton.setBounds(10, 35, 94, 28);
+        Button btnNewButton = new Button(container, SWT.ARROW | SWT.DOWN);
+        btnNewButton.setBounds(10, 35, 29, 14);
         btnNewButton.setText("New Button");
+        
+        text = new Text(container, SWT.BORDER);
+        text.setBounds(110, 24, 64, 19);
+        
+        Label lblNewLabel = new Label(container, SWT.NONE);
+        lblNewLabel.setBounds(115, 120, 59, 14);
+        lblNewLabel.setText("New Label");
 
         return container;
     }
